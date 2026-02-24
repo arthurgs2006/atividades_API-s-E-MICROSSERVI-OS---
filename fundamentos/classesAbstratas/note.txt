@@ -1,0 +1,5 @@
+O sistema apresentado atende corretamente aos princípios de orientação a objetos, utilizando herança, polimorfismo e abstração. Entretanto, uma melhoria importante seria substituir o uso de um array fixo por uma estrutura dinâmica, como ArrayList<Pessoa>. Isso tornaria o sistema mais flexível e evitaria a limitação de tamanho do cadastro, além de eliminar a necessidade de controle manual do índice qtdAtual.
+
+Outra melhoria relevante seria a aplicação do princípio de encapsulamento mais rigoroso, tornando todos os atributos private e utilizando métodos getters e setters quando necessário. Além disso, poderia ser criada uma interface para cálculo de imposto (por exemplo, Tributavel), tornando o sistema mais extensível caso outras classes também precisem implementar regras de tributação.
+
+Por fim, seria interessante adicionar validações (como impedir salários negativos) e implementar persistência em banco de dados ou arquivo, permitindo que os dados cadastrados não sejam perdidos ao encerrar a aplicação. Isso tornaria o sistema mais próximo de uma aplicação real de gestão de pessoas.
