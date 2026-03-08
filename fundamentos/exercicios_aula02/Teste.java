@@ -73,18 +73,18 @@ public class TestedoProduto {
 
         System.out.println("Nomes (method reference): " + nomesMethodRef);
 
-        buscarProdutoPorNome(produtos, "Laptop")
+        searchProductByName(produtos, "Laptop")
             .ifPresent(p -> System.out.println("\nProduto encontrado: " + p));
 
         try {
-            buscarProdutoPorNome(produtos, "Geladeira")
+            searchProductByName(produtos, "Geladeira")
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado!"));
         } catch (RuntimeException e) {
             System.out.println("\nExceção intencional capturada: " + e.getMessage());
         }
     } 
 
-    public static Optional<Produto> buscarProdutoPorNome(List<Produto> produtos, String nome) {
+    public static Optional<Produto> searchProductByName(List<Produto> produtos, String nome) {
         return produtos.stream()
             .filter(p -> p.getNome().equalsIgnoreCase(nome))
             .findFirst();
